@@ -4,66 +4,66 @@ const respon = require("../helpers/response");
 module.exports = {
   getAllProduct: (req, res) => {
     modelProduct
-      .getAllProuct()
-      .then((response) => {
+      .getAllProduct()
+      .then(response => {
         respon.success(res, 200, response);
       })
-      .catch((err) => {
+      .catch(err => {
         console.log(err);
       });
   },
 
   getProductByCategory: (req, res) => {
     modelProduct
-      .getProductByCategory()
-      .then((response) => {
+      .getProductByCategory(req.params.name)
+      .then(response => {
         respon.success(res, 200, response);
       })
-      .catch((err) => {
+      .catch(err => {
         console.log(err);
       });
   },
 
   getProductbyLabel: (req, res) => {
     modelProduct
-      .getProductByLabel()
-      .then((response) => {
+      .getProductByLabel(req.params.name)
+      .then(response => {
         respon.success(res, 200, response);
       })
-      .catch((err) => {
+      .catch(err => {
         console.log(err);
       });
   },
 
   getProductByStatus: (req, res) => {
     modelProduct
-      .getProductByStatus()
-      .then((response) => {
+      .getProductByStatus(req.params.name)
+      .then(response => {
         respon.success(res, 200, response);
       })
-      .catch((err) => {
+      .catch(err => {
         console.log(err);
       });
   },
 
   getProductDetail: (req, res) => {
     modelProduct
-      .getProductDetail()
-      .then((response) => {
+      .getProductDetail(req.params.name)
+      .then(response => {
         respon.success(res, 200, response);
       })
-      .catch((err) => {
+      .catch(err => {
         console.log(err);
       });
   },
 
   searchProduct: (req, res) => {
     modelProduct
-      .searchProduct()
-      .then((response) => {
+      .searchProduct(req.params.name)
+      .then(response => {
         respon.success(res, 200, response);
       })
-      .catch((err) => {
+      .catch(err => {
         console.log(err);
       });
   }

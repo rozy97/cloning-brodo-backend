@@ -29,7 +29,7 @@ module.exports = {
   },
   deleteWishlist: id => {
     return new Promise((resolve, reject) => {
-      conn.query("DELETE FROM wishlist WHERE id=?", [id], (err, res) => {
+      db.query("DELETE FROM wishlist WHERE id=?", [id], (err, res) => {
         !err ? resolve(res) : reject(err);
       });
     });

@@ -29,7 +29,7 @@ module.exports = {
   },
   deleteCart: id => {
     return new Promise((resolve, reject) => {
-      conn.query("DELETE FROM cart WHERE id=?", [id], (err, res) => {
+      db.query("DELETE FROM cart WHERE id=?", [id], (err, res) => {
         !err ? resolve(res) : reject(err);
       });
     });

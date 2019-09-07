@@ -5,32 +5,32 @@ module.exports = {
   getAllWishlist: (req, res) => {
     modelWishlist
       .getAllWishlist()
-      .then((response) => {
+      .then(response => {
         respon.success(res, 200, response);
       })
-      .catch((err) => {
+      .catch(err => {
         console.log(err);
       });
   },
 
   postWishlist: (req, res) => {
     modelWishlist
-      .postWishlist()
-      .then((response) => {
+      .postWishlist(req.body)
+      .then(response => {
         respon.success(res, 200, response);
       })
-      .catch((err) => {
+      .catch(err => {
         console.log(err);
       });
   },
 
   deleteWishlist: (req, res) => {
     modelWishlist
-      .postWishlist()
-      .then((response) => {
+      .deleteWishlist(req.params.id)
+      .then(response => {
         respon.success(res, 200, response);
       })
-      .catch((err) => {
+      .catch(err => {
         console.log(err);
       });
   }

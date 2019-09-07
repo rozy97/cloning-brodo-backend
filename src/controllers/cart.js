@@ -5,32 +5,32 @@ module.exports = {
   getAllCart: (req, res) => {
     modelCart
       .getAllCart()
-      .then((response) => {
+      .then(response => {
         respon.success(res, 200, response);
       })
-      .catch((err) => {
+      .catch(err => {
         console.log(err);
       });
   },
 
   postCart: (req, res) => {
     modelCart
-      .postCart()
-      .then((response) => {
+      .postCart(req.body)
+      .then(response => {
         respon.success(res, 200, response);
       })
-      .catch((err) => {
+      .catch(err => {
         console.log(err);
       });
   },
 
   deleteCart: (req, res) => {
     modelCart
-      .postCart()
-      .then((response) => {
+      .deleteCart(req.params.id)
+      .then(response => {
         respon.success(res, 200, response);
       })
-      .catch((err) => {
+      .catch(err => {
         console.log(err);
       });
   }

@@ -2,6 +2,7 @@ const db = require("../configs/db-config");
 
 module.exports = {
   getAllProduct: () => {
+    //DONE
     return new Promise((resolve, reject) => {
       db.query("SELECT * FROM products", (err, res) => {
         !err ? resolve(res) : reject(err);
@@ -9,6 +10,7 @@ module.exports = {
     });
   },
   getProductDetail: name => {
+    // DONE
     return new Promise((resolve, reject) => {
       db.query("SELECT * FROM products WHERE name=?", [name], (err, res) => {
         !err ? resolve(res) : reject(err);
@@ -16,6 +18,7 @@ module.exports = {
     });
   },
   getProductByCategory: name => {
+    // DONE
     return new Promise((resolve, reject) => {
       db.query(
         "SELECT * FROM products WHERE category=?",
@@ -62,8 +65,8 @@ module.exports = {
   getProductSearch: name => {
     return new Promise((resolve, reject) => {
       conn.query(
-        "SELECT products.*, categories.name AS category FROM products INNER JOIN categories ON products.id_category=categories.id WHERE categories.name LIKE ? OR products.name LIKE ? OR products.description LIKE ?",
-        ["%" + name + "%", "%" + name + "%", "%" + name + "%"],
+        "SELECT * FROM products WHERE name LIKE ?",
+        ["%" + name + "%"],
         (err, res) => {
           !err ? resolve(res) : reject(err);
         }
