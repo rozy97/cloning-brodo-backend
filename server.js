@@ -6,7 +6,7 @@ require("dotenv/config");
 
 // initial express
 const app = express();
-const port = 6969;
+const port = 5000;
 
 const middleware = (req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
