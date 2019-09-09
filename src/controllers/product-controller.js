@@ -24,27 +24,27 @@ module.exports = {
       });
   },
 
-  getProductbyLabel: (req, res) => {
-    modelProduct
-      .getProductByLabel(req.params.name)
-      .then(response => {
-        respon.success(res, 200, response);
-      })
-      .catch(err => {
-        console.log(err);
-      });
-  },
+  // getProductbyLabel: (req, res) => {
+  //   modelProduct
+  //     .getProductByLabel(req.params.name)
+  //     .then(response => {
+  //       respon.success(res, 200, response);
+  //     })
+  //     .catch(err => {
+  //       console.log(err);
+  //     });
+  // },
 
-  getProductByStatus: (req, res) => {
-    modelProduct
-      .getProductByStatus(req.params.name)
-      .then(response => {
-        respon.success(res, 200, response);
-      })
-      .catch(err => {
-        console.log(err);
-      });
-  },
+  // getProductByStatus: (req, res) => {
+  //   modelProduct
+  //     .getProductByStatus(req.params.name)
+  //     .then(response => {
+  //       respon.success(res, 200, response);
+  //     })
+  //     .catch(err => {
+  //       console.log(err);
+  //     });
+  // },
 
   getProductDetail: (req, res) => {
     modelProduct
@@ -57,9 +57,20 @@ module.exports = {
       });
   },
 
-  searchProduct: (req, res) => {
+  getProductSearch: (req, res) => {
     modelProduct
-      .searchProduct(req.params.name)
+      .getProductSearch(req.params.name)
+      .then(response => {
+        respon.success(res, 200, response);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  },
+
+  getProductPaginate: (req, res) => {
+    modelProduct
+      .getProductPaginate(req.params.offset, req.params.limit)
       .then(response => {
         respon.success(res, 200, response);
       })
