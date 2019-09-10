@@ -11,16 +11,8 @@ module.exports = {
   postWishlist: req => {
     return new Promise((resolve, reject) => {
       db.query(
-        "INSERT INTO wishlist SET id_label=?, id_status=?, name=?, description=?, price=?, category=?, image=?",
-        [
-          req.id_label,
-          req.id_status,
-          req.name,
-          req.description,
-          req.price,
-          req.category,
-          req.image
-        ],
+        "INSERT INTO wishlist SET name=?, price=?, image=?",
+        [req.name, req.price, req.image],
         (err, res) => {
           !err ? resolve(res) : reject(err);
         }

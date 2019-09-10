@@ -24,28 +24,6 @@ module.exports = {
       });
   },
 
-  // getProductbyLabel: (req, res) => {
-  //   modelProduct
-  //     .getProductByLabel(req.params.name)
-  //     .then(response => {
-  //       respon.success(res, 200, response);
-  //     })
-  //     .catch(err => {
-  //       console.log(err);
-  //     });
-  // },
-
-  // getProductByStatus: (req, res) => {
-  //   modelProduct
-  //     .getProductByStatus(req.params.name)
-  //     .then(response => {
-  //       respon.success(res, 200, response);
-  //     })
-  //     .catch(err => {
-  //       console.log(err);
-  //     });
-  // },
-
   getProductDetail: (req, res) => {
     modelProduct
       .getProductDetail(req.params.name)
