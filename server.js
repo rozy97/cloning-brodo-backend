@@ -23,6 +23,8 @@ app.use(logger("dev"));
 app.use(router);
 
 // server listening
-app.listen(port, () => {
-  console.log(`Listening on port ${port}...`);
-});
+app.listen(process.env.PORT || 5000)
+
+// listen(port, () => {
+//   console.log(`Listening on port ${port}...`);
+// });
