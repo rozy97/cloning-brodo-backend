@@ -4,6 +4,7 @@
   "description": "backend side for cloning e-commerse site https://bro.do",
   "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Firmansyah R, Galih M, M Fahmi F, M Fikri B",
