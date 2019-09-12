@@ -11,8 +11,8 @@ module.exports = {
   postWishlist: req => {
     return new Promise((resolve, reject) => {
       db.query(
-        "INSERT INTO wishlist SET name=?, price=?, image=?",
-        [req.name, req.price, req.image],
+        "INSERT INTO wishlist SET name=?, price=?, image=?, product_id=?",
+        [req.name, req.price, req.image, req.product_id],
         (err, res) => {
           !err ? resolve(res) : reject(err);
         }
@@ -21,7 +21,7 @@ module.exports = {
   },
   deleteWishlist: id => {
     return new Promise((resolve, reject) => {
-      db.query("DELETE FROM wishlist WHERE id=?", [id], (err, res) => {
+      db.query("DELETE FROM wishlist WHERE product_id=?", [id], (err, res) => {
         !err ? resolve(res) : reject(err);
       });
     });

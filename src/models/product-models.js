@@ -1,10 +1,10 @@
 const db = require("../configs/db-config");
 
 module.exports = {
-  getAllProduct: () => {
+  getAllProduct: (order = "id") => {
     //DONE
     return new Promise((resolve, reject) => {
-      db.query("SELECT * FROM products", (err, res) => {
+      db.query(`SELECT * FROM products ORDER BY ${order}`, (err, res) => {
         !err ? resolve(res) : reject(err);
       });
     });
@@ -17,11 +17,11 @@ module.exports = {
       });
     });
   },
-  getProductByCategory: name => {
+  getProductByCategory: (name, order = "id") => {
     // DONE
     return new Promise((resolve, reject) => {
       db.query(
-        "SELECT products.*, category.name as category FROM pivot JOIN products on products.id=pivot.product_id JOIN category on category.id=pivot.category_id WHERE category.name=?",
+        `SELECT products.*, category.name as category FROM pivot JOIN products on products.id=pivot.product_id JOIN category on category.id=pivot.category_id WHERE category.name=? ORDER BY ${order}`,
         [name],
         (err, res) => {
           !err ? resolve(res) : reject(err);

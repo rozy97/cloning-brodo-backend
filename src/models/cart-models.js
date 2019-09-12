@@ -11,8 +11,8 @@ module.exports = {
   postCart: req => {
     return new Promise((resolve, reject) => {
       db.query(
-        "INSERT INTO cart SET name=?, price=?, image=?",
-        [req.name, req.price, req.image],
+        "INSERT INTO cart SET name=?, price=?, image=?, product_id=?",
+        [req.name, req.price, req.image, req.id],
         (err, res) => {
           !err ? resolve(res) : reject(err);
         }

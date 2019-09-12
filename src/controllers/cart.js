@@ -17,7 +17,9 @@ module.exports = {
     modelCart
       .postCart(req.body)
       .then(response => {
-        respon.success(res, 200, response);
+        let data = req.body;
+        data.id = response.insertId;
+        respon.success(res, 200, data);
       })
       .catch(err => {
         console.log(err);
@@ -28,7 +30,8 @@ module.exports = {
     modelCart
       .deleteCart(req.params.id)
       .then(response => {
-        respon.success(res, 200, response);
+        let data = req.params.id;
+        respon.success(res, 200, data);
       })
       .catch(err => {
         console.log(err);

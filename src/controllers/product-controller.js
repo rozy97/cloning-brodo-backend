@@ -4,7 +4,7 @@ const respon = require("../helpers/response");
 module.exports = {
   getAllProduct: (req, res) => {
     modelProduct
-      .getAllProduct()
+      .getAllProduct(req.query.order)
       .then(response => {
         respon.success(res, 200, response);
       })
@@ -14,8 +14,10 @@ module.exports = {
   },
 
   getProductByCategory: (req, res) => {
+    const name = req.params.name;
+    const order = req.query.order;
     modelProduct
-      .getProductByCategory(req.params.name)
+      .getProductByCategory(name, order)
       .then(response => {
         respon.success(res, 200, response);
       })
