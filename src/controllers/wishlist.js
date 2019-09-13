@@ -13,6 +13,17 @@ module.exports = {
       });
   },
 
+  getWishlistByProductId: (req, res) => {
+    modelWishlist
+      .getWishlistByProductId(req.params.id)
+      .then(response => {
+        respon.success(res, 200, response);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  },
+
   postWishlist: (req, res) => {
     modelWishlist
       .postWishlist(req.body)

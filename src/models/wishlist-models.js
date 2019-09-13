@@ -8,6 +8,13 @@ module.exports = {
       });
     });
   },
+  getWishlistByProductId: (id) => {
+    return new Promise((resolve, reject) => {
+      db.query("SELECT * FROM wishlist WHERE product_id=?",[id], (err, res) => {
+        !err ? resolve(res) : reject(err);
+      });
+    });
+  },
   postWishlist: req => {
     return new Promise((resolve, reject) => {
       db.query(
