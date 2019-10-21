@@ -74,9 +74,9 @@ NODE_ENV=development node server.js
       </a>
     </td>
     <td align="center">
-      <a href="https://github.com/Gimindika">
-        <img width="200" src="https://avatars1.githubusercontent.com/Gimindika" alt="Gerrit Indika Mulya"><br/>
-          <sub><b>Gerrit Indika Mulya</b></sub>
+      <a href="https://github.com/fikribasa">
+        <img width="200" src="https://avatars1.githubusercontent.com/fikribasa" alt="M. Fikri Basa"><br/>
+          <sub><b>M. Fikri Basa</b></sub>
       </a>
     </td>
   </tr>
