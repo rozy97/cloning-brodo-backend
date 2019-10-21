@@ -6,15 +6,13 @@
 
 <br/><br/>
 
-<a href="#">
-  <img src="https://img.shields.io/badge/ReactJS-16.10-blue.svg?style=flat-square" alt="npm version">
-</a>
+
 
 
 ## Related Project
 express JS (https://github.com/rozy97/cloning-brodo-backend.git)
 
-
+# 
 
 MyXL Backend is a rest api application for cloning MyXL application using react-native and admin site using reactJS. Built with NodeJs using the ExpressJs Framework and NoSQL mongo Database.
 Express.js is a web application framework for Node.js. [More about Express](https://en.wikipedia.org/wiki/Express.js)
