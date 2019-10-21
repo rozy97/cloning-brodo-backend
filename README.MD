@@ -10,7 +10,7 @@
 
 
 ## Related Project
-express JS (https://github.com/rozy97/cloning-brodo-backend.git)
+express JS (https://github.com/firmansyahfachmi/Frontend-Clone-Brodo.git)
 
 # 
 
