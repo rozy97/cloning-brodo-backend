@@ -7,7 +7,7 @@ require("dotenv/config");
 
 // initial express
 const app = express();
-const port = 5000;
+const PORT = process.env.PORT || 5000
 
 const middleware = (req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
@@ -23,6 +23,8 @@ app.use(logger("dev"));
 app.use(router);
 
 // server listening
-app.listen(port, () => {
-  console.log(`Listening on port ${port}...`);
-});
+app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
+
+// listen(port, () => {
+//   console.log(`Listening on port ${port}...`);
+// });
