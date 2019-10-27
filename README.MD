@@ -39,16 +39,22 @@ Express.js is a web application framework for Node.js. [More about Express](http
 7. Choose HTTP Method and enter request url.(ex. localhost:3030/notes)
 8. You can see all the end point [here](#end-point)
 
-## Set up .env file
-Open .env file on your favorite code editor, and copy paste this code below :
-```
-PORT=3030
-HOST=localhost
-USER=root // default
-PASS= // default
-DATABASE=simple-rest
-NODE_ENV=development node server.js
-```
+## End Point
+**1. GET**
+* `/users`
+* `/products/:id`
+* `/category/:id` (Get user by id)
+* `/branchs
+
+**2. POST**
+* `/products`
+    * ``` { "title": "Adidas adizero", "description": "Fly in the sky", "image": "sky.jpg", "date_released": "2019-10-08", "genre_id": "2", "availability": "1" } ```
+
+* `/wishlist/:id`
+    * ``` { "userrating": "req.body.rating" } ```
+    
+* `/branchs`
+   * ``` { "name": "Yogyakarta", "maps": "maps link" } ```
 
 
 ## Contributors
